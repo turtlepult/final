@@ -1,0 +1,8 @@
+﻿{% extends "base.html" %}
+{% block content %}
+{% load news_tags %}
+{% for recipe in recipes %}
+{% show_recipe recipe=recipe btn_detail=True %}
+{% endfor %}
+{% include 'inc/_page_navigator.html' %}
+{% endblock content %}

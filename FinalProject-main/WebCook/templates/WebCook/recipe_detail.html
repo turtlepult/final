@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+{% load news_tags %}
+{% if object.author == user %}
+{% show_recipe recipe=object explain=True btn_edit=True btn_delete=True %}
+{% else %}
+{% show_recipe recipe=object explain=True %}
+{% endif %}
+{% endblock content %}
